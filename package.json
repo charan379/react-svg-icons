@@ -1,5 +1,5 @@
 {
-  "name": "@charan379/react-social-icons",
+  "name": "@charan379/react-icons",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,17 +8,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/charan379/react-social-icons.git"
+    "url": "git+https://github.com/charan379/react-icons.git"
   },
   "keywords": [
-    "react-social-icons"
+    "react-icons"
   ],
   "author": "charan379",
   "license": "AGPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/charan379/react-social-icons/issues"
+    "url": "https://github.com/charan379/react-icons/issues"
   },
-  "homepage": "https://github.com/charan379/react-social-icons#readme",
+  "homepage": "https://github.com/charan379/react-icons#readme",
   "devDependencies": {
     "@types/react": "^18.2.22",
     "react": "^18.2.0",
