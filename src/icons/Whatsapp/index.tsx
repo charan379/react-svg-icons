@@ -1,7 +1,7 @@
 import React from "react";
 import { IconProps } from "../../types";
 
-const Whatsapp: React.FC<IconProps> = (props) => {
+export const Whatsapp: React.FC<IconProps> = (props) => {
   const { size } = props;
   return (
     <>
@@ -27,5 +27,3 @@ const defaultProps: IconProps = {
 };
 
 Whatsapp.defaultProps = defaultProps;
-
-export default Whatsapp;

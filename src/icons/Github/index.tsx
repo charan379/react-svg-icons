@@ -1,7 +1,7 @@
 import React from "react";
 import { IconProps } from "../../types";
 
-const Github: React.FC<IconProps> = (props) => {
+export const Github: React.FC<IconProps> = (props) => {
   const { size } = props;
   return (
     <>
@@ -27,5 +27,3 @@ const defaultProps: IconProps = {
 };
 
 Github.defaultProps = defaultProps;
-
-export default Github;

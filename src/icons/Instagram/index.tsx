@@ -1,7 +1,7 @@
 import React from "react";
 import { IconProps } from "../../types";
 
-const Instagram: React.FC<IconProps> = (props) => {
+export const Instagram: React.FC<IconProps> = (props) => {
   const { size } = props;
   return (
     <>
@@ -44,5 +44,3 @@ const defaultProps: IconProps = {
 };
 
 Instagram.defaultProps = defaultProps;
-
-export default Instagram;

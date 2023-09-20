@@ -1,6 +1,6 @@
-export { default as Email } from "./Email";
-export { default as Instagram } from "./Instagram";
-export { default as Twitter } from "./Twitter";
-export { default as LinkedIn } from "./LinkedIn";
-export { default as Github } from "./Github";
-export { default as Whatsapp } from "./Whatsapp";
+export { Email } from "./Email";
+export { Github } from "./Github";
+export { Instagram } from "./Instagram";
+export { LinkedIn } from "./LinkedIn";
+export { Twitter } from "./Twitter";
+export { Whatsapp } from "./Whatsapp";

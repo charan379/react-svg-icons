@@ -1,1 +1,1 @@
-export { Instagram, Email, Twitter, Github, LinkedIn, Whatsapp } from "./icons";
+export { Email, Github, Instagram, LinkedIn, Twitter, Whatsapp } from "./icons";

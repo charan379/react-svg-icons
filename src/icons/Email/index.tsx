@@ -1,7 +1,7 @@
 import React from "react";
 import { IconProps } from "../../types";
 
-const Email: React.FC<IconProps> = (props) => {
+export const Email: React.FC<IconProps> = (props) => {
   const { size } = props;
   return (
     <>
@@ -37,5 +37,3 @@ const defaultProps: IconProps = {
 };
 
 Email.defaultProps = defaultProps;
-
-export default Email;
