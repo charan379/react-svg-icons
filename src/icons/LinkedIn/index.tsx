@@ -1,5 +1,5 @@
 import React from "react";
-import { IconProps } from "../../types";
+import { IconProps } from "..";
 
 export const LinkedIn: React.FC<IconProps> = (props) => {
   const { size } = props;

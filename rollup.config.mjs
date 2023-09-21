@@ -7,26 +7,32 @@ import packageJson from "./package.json" assert { type: "json" };
 
 export default [
   {
-    // input: ["src/**/*.ts", "src/**/*.tsx"],
     input: "src/index.ts",
+    external: ['react-dom'],
     output: [
       {
         file: packageJson.main,
         format: "cjs",
+        sourcemap: true,
       },
       {
         file: packageJson.module,
         format: "esm",
+        sourcemap: true,
       },
     ],
     plugins: [
       resolve(),
       commonjs(),
-      typescript({ tsconfig: "./tsconfig.json" }),
+      typescript({
+        tsconfig: "./tsconfig.json",
+        declaration: true,
+        declarationDir: "dist/types",
+      }),
     ],
   },
   {
-    input: "src/types/index.d.ts",
+    input: "dist/esm/types/index.d.ts",
     output: [{ file: "dist/index.d.ts", format: "esm" }],
     plugins: [dts()],
   },
