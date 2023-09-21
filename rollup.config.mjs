@@ -3,7 +3,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
 import postcss from "rollup-plugin-postcss";
-import peerDepsExternal from "rollup-plugin-peer-deps-external"
+import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import packageJson from "./package.json" assert { type: "json" };
 import terser from "@rollup/plugin-terser";
 
@@ -32,7 +32,7 @@ export default [
         declaration: true,
         declarationDir: "dist/types",
       }),
-      postcss(),
+      postcss({ extensions: [".css"] }),
       terser(),
     ],
   },
