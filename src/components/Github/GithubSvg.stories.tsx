@@ -19,7 +19,7 @@ const meta = {
             description: "Size of icon",
             table: {
                 type: { summary: 'number' },
-                defaultValue: { summary: 65 },
+                defaultValue: { summary: 55 },
             },
         },
     },
