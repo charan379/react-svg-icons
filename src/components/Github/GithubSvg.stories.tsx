@@ -13,8 +13,15 @@ const meta = {
     tags: ['autodocs'],
     // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
     argTypes: {
-        // backgroundColor: { control: 'color' },
-        size: { control: 'number' },
+        // size prop
+        size: {
+            control: "number",
+            description: "Size of icon",
+            table: {
+                type: { summary: 'number' },
+                defaultValue: { summary: 55 },
+            },
+        },
     },
 } satisfies Meta<typeof GithubSvg>;
 
@@ -24,6 +31,6 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const GithubSvgIcon: Story = {
     args: {
-        size: 20,
+        size: 55,
     },
 };
