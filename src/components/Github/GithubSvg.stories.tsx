@@ -16,7 +16,7 @@ const meta = {
         // size prop
         size: {
             control: "number",
-            description: "Size of icon",
+            description: "Size of icon to be rendered",
             table: {
                 type: { summary: 'number' },
                 defaultValue: { summary: 55 },
