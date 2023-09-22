@@ -27,7 +27,7 @@
   "bugs": {
     "url": "https://github.com/charan379/react-icons/issues"
   },
-  "homepage": "https://github.com/charan379/react-icons#readme",
+  "homepage": "https://github.com/charan379/react-icons",
   "devDependencies": {
     "@babel/core": "^7.22.20",
     "@babel/preset-env": "^7.22.20",
