@@ -1,6 +1,6 @@
 {
-  "name": "@charan379/react-icons",
-  "version": "1.0.9",
+  "name": "@charan379/react-svg-icons",
+  "version": "0.0.1",
   "description": "",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -19,17 +19,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/charan379/react-icons.git"
+    "url": "git+https://github.com/charan379/react-svg-icons.git"
   },
   "keywords": [
+    "react-svg-icons",
     "react-icons"
   ],
   "author": "charan379",
   "license": "AGPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/charan379/react-icons/issues"
+    "url": "https://github.com/charan379/react-svg-icons/issues"
   },
-  "homepage": "https://github.com/charan379/react-icons",
+  "homepage": "https://github.com/charan379/react-svg-icons",
   "devDependencies": {
     "@babel/core": "^7.22.20",
     "@babel/preset-env": "^7.22.20",
