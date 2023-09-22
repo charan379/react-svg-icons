@@ -15,7 +15,7 @@ const meta = {
     argTypes: {
         // size prop
         size: {
-            control: "number",
+            control: { type: 'number', min:24, max:1024, step: 2 },
             description: "Size of icon to be rendered",
             table: {
                 type: { summary: 'number' },
