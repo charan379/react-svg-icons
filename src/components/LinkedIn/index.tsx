@@ -1,0 +1,1 @@
+export { LinkedInSvg } from "./LinkedInSvg"

@@ -5,6 +5,6 @@ export * from "./LinkedIn";
 export * from "./Twitter";
 export * from "./Whatsapp";
 
-export interface IconProps {
-    size: number;
+export interface SvgProps {
+    size?: number;
 }

@@ -1,8 +1,8 @@
 import React from "react";
-import { IconProps } from "..";
+import { SvgProps } from "..";
 
-export const Twitter: React.FC<IconProps> = (props) => {
-  const { size } = props;
+export const TwitterSvg: React.FC<SvgProps> = (props) => {
+  const { size = 24 } = props;
   return (
     <>
       {/* Twitter Svg */}
@@ -21,9 +21,3 @@ export const Twitter: React.FC<IconProps> = (props) => {
     </>
   );
 };
-
-const defaultProps: IconProps = {
-  size: 24,
-};
-
-Twitter.defaultProps = defaultProps;

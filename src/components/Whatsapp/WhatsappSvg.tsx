@@ -1,8 +1,8 @@
 import React from "react";
-import { IconProps } from "..";
+import { SvgProps } from "..";
 
 
-export const Whatsapp: React.FC<IconProps> = (props) => {
+export const WhatsappSvg: React.FC<SvgProps> = (props) => {
   const { size = 24 } = props;
   return (
     <>

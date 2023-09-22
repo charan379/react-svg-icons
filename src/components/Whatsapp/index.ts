@@ -1,0 +1,1 @@
+export { WhatsappSvg } from "./WhatsappSvg"

@@ -1,0 +1,1 @@
+export { InstagramSvg } from "./InstagramSvg"

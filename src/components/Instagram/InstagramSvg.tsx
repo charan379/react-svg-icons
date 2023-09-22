@@ -1,9 +1,9 @@
 import React from "react";
-import { IconProps } from "..";
+import { SvgProps } from "..";
 
 
-export const Instagram: React.FC<IconProps> = (props) => {
-  const { size } = props;
+export const InstagramSvg: React.FC<SvgProps> = (props) => {
+  const { size = 24 } = props;
   return (
     <>
       {/* instagram svg  */}
@@ -39,9 +39,3 @@ export const Instagram: React.FC<IconProps> = (props) => {
     </>
   );
 };
-
-const defaultProps: IconProps = {
-  size: 24,
-};
-
-Instagram.defaultProps = defaultProps;
