@@ -2,7 +2,7 @@ import React from "react";
 import { SvgProps } from "..";
 
 export const TwitterSvg: React.FC<SvgProps> = (props) => {
-  const { size = 24 } = props;
+  const { size = 55 } = props;
   return (
     <>
       {/* Twitter Svg */}

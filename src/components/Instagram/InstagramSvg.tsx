@@ -3,7 +3,7 @@ import { SvgProps } from "..";
 
 
 export const InstagramSvg: React.FC<SvgProps> = (props) => {
-  const { size = 24 } = props;
+  const { size = 55 } = props;
   return (
     <>
       {/* instagram svg  */}
