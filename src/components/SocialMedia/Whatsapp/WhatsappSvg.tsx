@@ -1,5 +1,5 @@
 import React from "react";
-import { SvgProps } from "..";
+import { SvgProps } from "../..";
 
 
 export const WhatsappSvg: React.FC<SvgProps> = (props) => {

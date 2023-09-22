@@ -1,5 +1,5 @@
 import React from "react";
-import { SvgProps } from "..";
+import { SvgProps } from "../..";
 
 export const TwitterSvg: React.FC<SvgProps> = (props) => {
   const { size = 55 } = props;
