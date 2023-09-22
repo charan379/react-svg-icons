@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { InstagramSvg } from "./InstagramSvg"
+import { LinkedInSvg } from "./LinkedInSvg"
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
-    title: 'React-Svg-Icons/InstagramSvg',
-    component: InstagramSvg,
+    title: 'React Svg Icons/Social Media/LinkedInSvg',
+    component: LinkedInSvg,
     parameters: {
         // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
         layout: 'centered',
@@ -23,13 +23,13 @@ const meta = {
             },
         },
     },
-} satisfies Meta<typeof InstagramSvg>;
+} satisfies Meta<typeof LinkedInSvg>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const InstagramSvgIcon: Story = {
+export const LinkedInSvgIcon: Story = {
     args: {
         size: 55,
     },

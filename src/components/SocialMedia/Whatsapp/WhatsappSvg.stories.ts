@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { TwitterSvg } from "./TwitterSvg"
+import { WhatsappSvg } from "./WhatsappSvg"
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
-    title: 'React-Svg-Icons/TwitterSvg',
-    component: TwitterSvg,
+    title: 'React Svg Icons/Social Media/WhatsappSvg',
+    component: WhatsappSvg,
     parameters: {
         // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
         layout: 'centered',
@@ -23,13 +23,13 @@ const meta = {
             },
         },
     },
-} satisfies Meta<typeof TwitterSvg>;
+} satisfies Meta<typeof WhatsappSvg>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const TwitterSvgIcon: Story = {
+export const WhatsappSvgIcon: Story = {
     args: {
         size: 55,
     },
