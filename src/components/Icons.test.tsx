@@ -29,8 +29,12 @@ describe("Svg Icons Render Test", () => {
     });
 
     // Instagram tests
-    test("Renders Instagram Svg icon component", () => {
+    test("Renders Instagram Svg icon component with size 40", () => {
         render(<InstagramSvg size={40} />);
+    });
+
+    test("Renders Instagram Svg icon component with default size", () => {
+        render(<InstagramSvg />);
     });
 
     // Linked In tests
