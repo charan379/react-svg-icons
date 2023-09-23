@@ -5,7 +5,7 @@ export interface EmailSvgProps extends SvgProps {
   envelopTopColor?: string;
   envelopTopBorderColor?: string;
   envelopLeftBorderColor?: string;
-  envelopRightBorderColor: string;
+  envelopRightBorderColor?: string;
   envelopInnerTopLeftColor?: string;
   envelopInnerLeftColor?: string;
   envelopInnerRightColor?: string;
