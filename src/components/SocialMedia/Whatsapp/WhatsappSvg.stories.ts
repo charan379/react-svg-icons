@@ -66,7 +66,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const Icon1: Story = {
+export const Example1: Story = {
     args: {
         size: 55,
         outerBorderColor: "#cfd8dc",
@@ -76,7 +76,7 @@ export const Icon1: Story = {
     },
 };
 
-export const Icon2: Story = {
+export const Example2: Story = {
     args: {
         size: 55,
         outerBorderColor: "#cfd8dc",
