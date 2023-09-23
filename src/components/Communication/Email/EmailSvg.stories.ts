@@ -118,6 +118,9 @@ export const Example1: Story = {
 
 // Example 2
 export const Example2: Story = {
+    parameters: {
+        backgrounds: { default: 'dark' },
+    },
     args: {
         size: 55,
         envelopTopColor: "#0684de",
