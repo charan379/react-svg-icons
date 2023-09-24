@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { InstagramSvg } from "./InstagramSvg"
+import { InstagramSvg, InstagramSvgColorTypes } from "./InstagramSvg"
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
@@ -22,6 +22,56 @@ const meta = {
                 defaultValue: { summary: 55 },
             },
         },
+        // colorsType prop
+        colorsType: {
+            options: Object.values(InstagramSvgColorTypes),
+            mapping: Object.values(InstagramSvgColorTypes),
+            control: {
+                type: 'select',
+                lables: Object.keys(InstagramSvgColorTypes)
+            },
+            description: "Select whether to render original colors for custom colors provided as props",
+            table: {
+                type: { summary: 'string' },
+                defaultValue: { summary: InstagramSvgColorTypes.ORIGINAL },
+            },
+        },
+        // thickLinesColor prop
+        thickLinesColor: {
+            control: { type: 'color', presetColors: [], },
+            description: "Color to be rendered at thickLines ",
+            table: {
+                type: { summary: 'color' },
+                defaultValue: { summary: "#00000" },
+            },
+        },
+        // thinLinesColor prop
+        thinLinesColor: {
+            control: { type: 'color', presetColors: [], },
+            description: "Color to be rendered at thinLines ",
+            table: {
+                type: { summary: 'color' },
+                defaultValue: { summary: "#fff" },
+            },
+        },
+        // northWestShade prop
+        northWestShade: {
+            control: { type: 'color', presetColors: [], },
+            description: "Color to be rendered at northWestShade ",
+            table: {
+                type: { summary: 'color' },
+                defaultValue: { summary: "" },
+            },
+        },
+        // radientsUrlid prop
+        radientsUrlid: {
+            control: { type: 'text' },
+            description: "Radients Url unique id, if rendering same icon multiple times its mandatory to differ colors from one to other icons.",
+            table: {
+                type: { summary: 'string/number' },
+                defaultValue: { summary: 234 },
+            },
+        },
     },
 } satisfies Meta<typeof InstagramSvg>;
 
@@ -29,26 +79,36 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const InstagramSvgIcon: Story = {
+
+export const DocsRenderer: Story = {
     args: {
         size: 55,
-        originalColors: true,
-        id: 3
+        colorsType: InstagramSvgColorTypes.ORIGINAL,
+        radientsUrlid: "3"
     },
 };
 
-export const InstagramSvgIcon2: Story = {
+export const Example1: Story = {
+    args: {
+        size: 55,
+        colorsType: InstagramSvgColorTypes.ORIGINAL,
+        radientsUrlid: "2"
+    },
+};
+
+export const Example2: Story = {
     args: {
         size: 78,
-        originalColors: false,
-        id: 4
+        colorsType: InstagramSvgColorTypes.CUSTOM,
+        radientsUrlid: 4,
+        northWestShade: "yellow"
     },
 };
 
-export const InstagramSvgIcon3: Story = {
+export const Example3: Story = {
     args: {
         size: 55,
-        originalColors: false,
-        id: 5
+        colorsType: InstagramSvgColorTypes.CUSTOM,
+        radientsUrlid: 5
     },
 };
