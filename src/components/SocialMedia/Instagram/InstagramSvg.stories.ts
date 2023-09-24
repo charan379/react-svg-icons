@@ -15,7 +15,7 @@ const meta = {
     argTypes: {
         // size prop
         size: {
-            control: { type: 'number', min:24, max:1024, step: 2 },
+            control: { type: 'number', min: 24, max: 1024, step: 2 },
             description: "Size of icon to be rendered",
             table: {
                 type: { summary: 'number' },
@@ -32,5 +32,23 @@ type Story = StoryObj<typeof meta>;
 export const InstagramSvgIcon: Story = {
     args: {
         size: 55,
+        originalColors: true,
+        id: 3
+    },
+};
+
+export const InstagramSvgIcon2: Story = {
+    args: {
+        size: 78,
+        originalColors: false,
+        id: 4
+    },
+};
+
+export const InstagramSvgIcon3: Story = {
+    args: {
+        size: 55,
+        originalColors: false,
+        id: 5
     },
 };
