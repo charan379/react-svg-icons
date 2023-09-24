@@ -1,128 +1,40 @@
 import React from "react";
-import { FixedLengthArray, SvgProps } from "../..";
+import { SvgProps } from "../..";
 
-export enum InstagramSvgColorsType {
-  ORIGINAL = "ORIGINAL",
-  TWOTONE = "TWO-TONE",
-  CUSTOM = "CUSTOM",
-}
 
-export interface InstagramSvgProps extends SvgProps {
-  colorsType?: InstagramSvgColorsType;
-  twoToneColors?: FixedLengthArray<string, 2>;
-  customColors?: FixedLengthArray<string, 8>;
-}
-
-export const InstagramSvg: React.FC<InstagramSvgProps> = (props) => {
-  //
-  const originalColors: FixedLengthArray<string, 8> = [
-    "#fd5",
-    "#ff543f",
-    "#fc5245",
-    "#e64771",
-    "#d53e91",
-    "#cc39a4",
-    "#c837ab",
-    "#4168c9",
-  ];
-  const {
-    size = 55,
-    colorsType = InstagramSvgColorsType.ORIGINAL,
-    twoToneColors = ["#000000", "#fff"],
-    customColors = originalColors,
-  } = props;
-  //
-  const innerColor: string =
-    colorsType === InstagramSvgColorsType["TWOTONE"] && twoToneColors[1]
-      ? twoToneColors[1]
-      : "#fff";
-  //
-  let gradientColors: FixedLengthArray<string, 8> =
-    colorsType === InstagramSvgColorsType["TWOTONE"] && twoToneColors[0]
-      ? (Array(7).fill(twoToneColors[0]) as FixedLengthArray<string, 8>)
-      : (Array(7).fill("#000000") as FixedLengthArray<string, 8>);
-  //
-  gradientColors =
-    colorsType === InstagramSvgColorsType.ORIGINAL
-      ? originalColors
-      : gradientColors;
-  //
-  gradientColors =
-    colorsType === InstagramSvgColorsType.CUSTOM
-      ? customColors
-      : gradientColors;
-
+export const InstagramSvg: React.FC<SvgProps> = (props) => {
+  const { size = 55 } = props;
   return (
     <>
       {/* instagram svg  */}
       <svg
+        width={`${size}px`}
+        height={`${size}px`}
+        viewBox="0 0 24 24"
+        fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        x="0px"
-        y="0px"
-        width={size}
-        height={size}
-        viewBox="0 0 48 48"
       >
-        <radialGradient
-          id="yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1"
-          cx="19.38"
-          cy="42.035"
-          r="44.899"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop offset="0" stop-color={gradientColors[0]}></stop>
-          <stop offset=".328" stop-color={gradientColors[1]}></stop>
-          <stop offset=".348" stop-color={gradientColors[2]}></stop>
-          <stop offset=".504" stop-color={gradientColors[3]}></stop>
-          <stop offset=".643" stop-color={gradientColors[4]}></stop>
-          <stop offset=".761" stop-color={gradientColors[5]}></stop>
-          <stop offset=".841" stop-color={gradientColors[6]}></stop>
-        </radialGradient>
         <path
-          fill="url(#yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1)"
-          d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"
-        ></path>
-        {/* top left gradient shade */}
-        <radialGradient
-          id="yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2"
-          cx="11.786"
-          cy="5.54"
-          r="29.813"
-          gradientTransform="matrix(1 0 0 .6663 0 1.849)"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop
-            offset="0"
-            stop-color={
-              colorsType === InstagramSvgColorsType.TWOTONE && twoToneColors[0]
-                ? twoToneColors[0]
-                : gradientColors[7]
-            }
-          ></stop>
-          <stop
-            offset=".999"
-            stop-color={
-              colorsType === InstagramSvgColorsType.TWOTONE && twoToneColors[0]
-                ? twoToneColors[0]
-                : gradientColors[7]
-            }
-            stop-opacity="0"
-          ></stop>
-        </radialGradient>
+          d="M17 1.99997H7C4.23858 1.99997 2 4.23855 2 6.99997V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V6.99997C22 4.23855 19.7614 1.99997 17 1.99997Z"
+          stroke="#ff377a"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
         <path
-          fill="url(#yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2)"
-          d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"
-        ></path>
-        {/* inner part */}
+          d="M15.9997 11.3701C16.1231 12.2023 15.981 13.0523 15.5935 13.7991C15.206 14.5459 14.5929 15.1515 13.8413 15.5297C13.0898 15.908 12.2382 16.0397 11.4075 15.906C10.5768 15.7723 9.80947 15.3801 9.21455 14.7852C8.61962 14.1903 8.22744 13.4229 8.09377 12.5923C7.96011 11.7616 8.09177 10.91 8.47003 10.1584C8.84829 9.40691 9.45389 8.7938 10.2007 8.4063C10.9475 8.0188 11.7975 7.87665 12.6297 8.00006C13.4786 8.12594 14.2646 8.52152 14.8714 9.12836C15.4782 9.73521 15.8738 10.5211 15.9997 11.3701Z"
+          stroke="#ff377a"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
         <path
-          fill={innerColor}
-          d="M24,31c-3.859,0-7-3.14-7-7s3.141-7,7-7s7,3.14,7,7S27.859,31,24,31z M24,19c-2.757,0-5,2.243-5,5	s2.243,5,5,5s5-2.243,5-5S26.757,19,24,19z"
-        ></path>
-        <circle cx="31.5" cy="16.5" r="1.5" fill={innerColor}></circle>
-        <path
-          fill={innerColor}
-          d="M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12	C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z"
-        ></path>
+          d="M17.5 6.49997H17.51"
+          stroke="#ff377a"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
       </svg>
     </>
   );
