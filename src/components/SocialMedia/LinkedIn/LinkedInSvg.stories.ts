@@ -15,11 +15,20 @@ const meta = {
     argTypes: {
         // size prop
         size: {
-            control: { type: 'number', min:24, max:1024, step: 2 },
+            control: { type: 'number', min: 24, max: 1024, step: 2 },
             description: "Size of icon to be rendered",
             table: {
                 type: { summary: 'number' },
                 defaultValue: { summary: 55 },
+            },
+        },
+        // color prop
+        color: {
+            control: { type: 'color', presetColors: [], },
+            description: "Color of icon to be rendered",
+            table: {
+                type: { summary: 'color' },
+                defaultValue: { summary: "#0288d1" },
             },
         },
     },
@@ -32,5 +41,6 @@ type Story = StoryObj<typeof meta>;
 export const LinkedInSvgIcon: Story = {
     args: {
         size: 55,
+        color: "#0288d1"
     },
 };
