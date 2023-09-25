@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { InstagramSvg, InstagramSvgColorTypes } from "./InstagramSvg"
+import { InstagramSvg } from "./InstagramSvg"
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
@@ -24,16 +24,16 @@ const meta = {
         },
         // colorsType prop
         colorsType: {
-            options: Object.values(InstagramSvgColorTypes),
-            mapping: Object.values(InstagramSvgColorTypes),
+            options: ["original", "custom"],
+            mapping: ["original", "custom"],
             control: {
                 type: 'select',
-                lables: Object.keys(InstagramSvgColorTypes)
+                lables: ["ORIGINAL", "CUSTOM"]
             },
             description: "Select whether to render original colors for custom colors provided as props",
             table: {
                 type: { summary: 'string' },
-                defaultValue: { summary: InstagramSvgColorTypes.ORIGINAL },
+                defaultValue: ["original", "custom"],
             },
         },
         // thickLinesColor prop
@@ -83,7 +83,7 @@ type Story = StoryObj<typeof meta>;
 export const DocsRenderer: Story = {
     args: {
         size: 55,
-        colorsType: InstagramSvgColorTypes.ORIGINAL,
+        colorsType: 'original',
         radientsUrlid: "3"
     },
 };
@@ -91,7 +91,7 @@ export const DocsRenderer: Story = {
 export const Example1: Story = {
     args: {
         size: 55,
-        colorsType: InstagramSvgColorTypes.ORIGINAL,
+        colorsType: 'original',
         radientsUrlid: "2"
     },
 };
@@ -99,7 +99,7 @@ export const Example1: Story = {
 export const Example2: Story = {
     args: {
         size: 78,
-        colorsType: InstagramSvgColorTypes.CUSTOM,
+        colorsType: 'custom',
         radientsUrlid: 4,
         northWestShade: "yellow"
     },
@@ -108,7 +108,7 @@ export const Example2: Story = {
 export const Example3: Story = {
     args: {
         size: 55,
-        colorsType: InstagramSvgColorTypes.CUSTOM,
+        colorsType: 'custom',
         radientsUrlid: 5
     },
 };
