@@ -22,7 +22,7 @@ export const GithubSvg: React.FC<GithubSvgProps> = (props) => {
     catSkinOpacity = 0.07,
     catInnnerColor = "#fff",
   } = props;
-  
+
   return (
     <>
       {/* Github Svg */}
@@ -42,10 +42,10 @@ export const GithubSvg: React.FC<GithubSvgProps> = (props) => {
           y2="23.508"
           gradientUnits="userSpaceOnUse"
         >
-          {/* catOuterLeftColor stop-color="#4c4c4c" */}
-          <stop offset="0" stop-color={catOuterLeftColor}></stop>
-          {/* catOuterRightColor stop-color="#343434" */}
-          <stop offset="1" stop-color={catOuterRightColor}></stop>
+          {/* catOuterLeftColor stopColor="#4c4c4c" */}
+          <stop offset="0" stopColor={catOuterLeftColor}></stop>
+          {/* catOuterRightColor stopColor="#343434" */}
+          <stop offset="1" stopColor={catOuterRightColor}></stop>
         </linearGradient>
         <path
           fill="url(#rL2wppHyxHVbobwndsT6Ca_AZOZNnY73haj_gr1)"
