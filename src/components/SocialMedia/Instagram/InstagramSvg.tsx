@@ -1,13 +1,9 @@
 import React from "react";
 import { FixedLengthArray, SvgProps } from "../..";
 
-export enum InstagramSvgColorTypes {
-  ORIGINAL = "original",
-  CUSTOM = "custom",
-}
 
 export interface InstagramSvgProps extends SvgProps {
-  colorsType?: InstagramSvgColorTypes;
+  colorsType?: "original" | "custom";
   thickLinesColor?: string;
   thinLinesColor?: string;
   northWestShade?: string;
@@ -17,7 +13,7 @@ export interface InstagramSvgProps extends SvgProps {
 export const InstagramSvg: React.FC<InstagramSvgProps> = (props) => {
   const {
     size = 55,
-    colorsType = InstagramSvgColorTypes.ORIGINAL,
+    colorsType = "original",
     thickLinesColor = "#00000",
     thinLinesColor = "#fff",
     northWestShade = "",
@@ -39,12 +35,12 @@ export const InstagramSvg: React.FC<InstagramSvgProps> = (props) => {
   let colors: FixedLengthArray<string, 9>;
 
   switch (colorsType) {
-    case InstagramSvgColorTypes.ORIGINAL: {
+    case "original": {
       colors = originalRadicalsAndColors;
       break;
     }
 
-    case InstagramSvgColorTypes.CUSTOM: {
+    case "custom": {
       colors = Array(9).fill(thickLinesColor) as FixedLengthArray<string, 9>;
       colors[7] = northWestShade ?? thickLinesColor;
       colors[8] = thinLinesColor;
