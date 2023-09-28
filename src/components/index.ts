@@ -1,4 +1,5 @@
 export * from "./SocialMedia"
+export * from "./Communication"
 
 export interface SvgProps {
     size?: number;
