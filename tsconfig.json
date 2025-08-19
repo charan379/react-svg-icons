@@ -1,22 +1,19 @@
 {
   "compilerOptions": {
-    // Default
-    "target": "es5",
+    "target": "ES2018",                // or ESNext if you prefer
+    "module": "CommonJS",             // For Node.js compatible output
+    "declaration": true,              // Generate .d.ts files
+    "declarationDir": "dist/types",  // Output folder for type declarations
+    "outDir": "dist/cjs",             // Output folder for compiled JS
+    "strict": true,                   // All strict type-checking options
+    "moduleResolution": "Node",
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
     "skipLibCheck": true,
-
-    // Added
-    "jsx": "react",
-    "module": "ESNext",
-    "declaration": true,
-    "declarationDir": "src/types",
+    "jsx": "react-jsx",               // if you use React 17+
     "sourceMap": true,
-    "outDir": "dist",
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "emitDeclarationOnly": true,
-    "rootDir": "src"
-  }
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "test"]
 }

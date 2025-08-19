@@ -7,10 +7,13 @@
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts",
+  "types": "dist/types/index.d.ts",
   "scripts": {
-    "build": "rimraf distribution && tsc",
+    "build:cjs": "tsc -p tsconfig.json",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build": "npm run build:cjs && npm run build:esm",
     "prepare": "npm run build",
+    "clean": "rimraf dist",
     "test": "jest",
     "coverage": "jest --coverage",
     "rollup": "rollup -c",

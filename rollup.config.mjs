@@ -5,7 +5,7 @@ import dts from "rollup-plugin-dts";
 // for css
 import postcss from "rollup-plugin-postcss";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
-import packageJson from "./package.json" assert { type: "json" };
+const packageJson = require("./package.json");
 // to minify package
 import terser from "@rollup/plugin-terser";
 
