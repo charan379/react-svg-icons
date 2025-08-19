@@ -9,6 +9,8 @@
   ],
   "types": "dist/index.d.ts",
   "scripts": {
+    "build": "rimraf distribution && tsc",
+    "prepare": "npm run build",
     "test": "jest",
     "coverage": "jest --coverage",
     "rollup": "rollup -c",
@@ -58,6 +60,7 @@
     "jest-environment-jsdom": "^29.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "rimraf": "^6.0.1",
     "rollup": "^3.29.2",
     "rollup-plugin-dts": "^6.0.2",
     "rollup-plugin-peer-deps-external": "^2.2.4",
